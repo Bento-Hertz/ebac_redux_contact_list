@@ -1,10 +1,15 @@
+import { Provider } from 'react-redux';
+import store from './store';
+import { GlobalStyle } from './styles';
+import { Contacts } from './components/Contacts';
 
-function App() {
+export const App = () => {
   return (
-    <div>
-
-    </div>
+    <Provider store={store}>
+      <GlobalStyle />
+      <div className='container'>
+        <Contacts />
+      </div>
+    </Provider>
   );
 }
-
-export default App;
